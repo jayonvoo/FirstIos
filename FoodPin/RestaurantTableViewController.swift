@@ -18,8 +18,16 @@ class RestaurantTableViewController: UITableViewController {
 
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
 
+    var restaurantIsVisited = [Bool]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        for _ in 1...restaurantNames.count {
+            restaurantIsVisited.append(false)
+        }
+
+        print(restaurantIsVisited)
 
     }
 
@@ -49,12 +57,22 @@ class RestaurantTableViewController: UITableViewController {
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         cell.locationLabel.text = restaurantLocations[indexPath.row]
 
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
         let optionMenu = UIAlertController(title: nil, message: "What?", preferredStyle: .actionSheet)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let checkInActopn = UIAlertAction(title: "Check in", style: .default, handler: { (action: UIAlertAction!) -> Void in
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType = .checkmark
+            self.restaurantIsVisited[indexPath.row] = true
+
+        })
+
         let callerActionHandler = { (action: UIAlertAction!) -> Void in
 
             let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry", preferredStyle: .alert)
@@ -65,9 +83,11 @@ class RestaurantTableViewController: UITableViewController {
 
         let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default, handler: callerActionHandler)
 
+        optionMenu.addAction(checkInActopn)
         optionMenu.addAction(cancelAction)
         optionMenu.addAction(callAction)
 
         present(optionMenu, animated: true, completion: nil)
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }

@@ -71,7 +71,7 @@
                                 <connections>
                                     <outlet property="locationLabel" destination="3im-1W-6ZN" id="oLk-iW-6Fi"/>
                                     <outlet property="nameLabel" destination="rUN-Zb-p8c" id="xDk-iP-wFi"/>
-                                    <outlet property="thumbnailImageView" destination="oXg-QP-sjt" id="7HJ-RT-zdh"/>
+                                    <outlet property="thumbnailImageView" destination="oXg-QP-sjt" id="TG3-1q-WBs"/>
                                     <outlet property="typeLabel" destination="CS3-qz-oBL" id="eli-S8-Ud6"/>
                                 </connections>
                             </tableViewCell>
