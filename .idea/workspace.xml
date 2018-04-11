@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04cbee2e-af5b-4298-bae1-02b91861e201" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" afterDir="false" />
     </list>
     <ignored path="FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
@@ -25,19 +24,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestaurantTableViewController.swift" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RestaurantTableViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="81" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="399">
+              <caret line="89" column="60" lean-forward="true" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4753" />
           </provider>
         </entry>
       </file>
@@ -132,7 +124,7 @@
       <workItem from="1523331793498" duration="14787000" />
       <workItem from="1523370435184" duration="1645000" />
       <workItem from="1523372786150" duration="1000" />
-      <workItem from="1523412343301" duration="601000" />
+      <workItem from="1523412343301" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="update 1147">
       <created>1523332081773</created>
@@ -190,22 +182,29 @@
       <option name="project" value="LOCAL" />
       <updated>1523351596342</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update 1020">
+      <created>1523413231477</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1523413231477</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17038000" />
+    <option name="totallyTimeSpent" value="17778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="39" width="1349" height="825" extended-state="0" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23493975" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23493975" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500753" side_tool="true" weight="0.21153846" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28846154" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49924698" visible="true" weight="0.21153846" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924698" visible="true" weight="0.21153846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32967034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997253" />
@@ -257,7 +256,8 @@
     <MESSAGE value="update 1205" />
     <MESSAGE value="update 1229" />
     <MESSAGE value="update 1713" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 1713" />
+    <MESSAGE value="update 1020" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 1020" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -342,16 +342,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="390">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4753" />
+        <state relative-caret-position="399">
+          <caret line="89" column="60" lean-forward="true" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
+        </state>
       </provider>
     </entry>
   </component>

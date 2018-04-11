@@ -90,4 +90,10 @@ class RestaurantTableViewController: UITableViewController {
         present(optionMenu, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: false)
     }
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        super.tableView(tableView, commit: editingStyle, forRowAt: indexPath)
+    }
+
+    table
 }
