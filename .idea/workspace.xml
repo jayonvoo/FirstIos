@@ -4,6 +4,8 @@
     <list default="true" id="04cbee2e-af5b-4298-bae1-02b91861e201" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodPin.xcodeproj/project.xcworkspace/xcuserdata/travelingkp.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin.xcodeproj/project.xcworkspace/xcuserdata/travelingkp.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcschemes/FoodPin.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcschemes/FoodPin.xcscheme" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" afterDir="false" />
     </list>
     <ignored path="FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
@@ -29,8 +31,8 @@
       <file leaf-file-name="RestaurantTableViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="394">
+              <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -129,7 +131,7 @@
       <workItem from="1523370435184" duration="1645000" />
       <workItem from="1523372786150" duration="1000" />
       <workItem from="1523412343301" duration="18004000" />
-      <workItem from="1523496148540" duration="1465000" />
+      <workItem from="1523496148540" duration="3865000" />
     </task>
     <task id="LOCAL-00001" summary="update 1147">
       <created>1523332081773</created>
@@ -194,14 +196,22 @@
       <option name="project" value="LOCAL" />
       <updated>1523413231477</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update 0947">
+      <created>1523497651378</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1523497651379</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35906000" />
+    <option name="totallyTimeSpent" value="38306000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1396" height="805" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22690909" />
@@ -262,7 +272,8 @@
     <MESSAGE value="update 1229" />
     <MESSAGE value="update 1713" />
     <MESSAGE value="update 1020" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 1020" />
+    <MESSAGE value="update 0947" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 0947" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -377,10 +388,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UIContextualAction/UIKit.UIContextualAction.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        <state relative-caret-position="394">
+          <caret line="151" column="5" lean-forward="true" selection-start-line="151" selection-start-column="5" selection-end-line="151" selection-end-column="5" />
         </state>
       </provider>
     </entry>
