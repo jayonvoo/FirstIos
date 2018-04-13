@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantTableViewController: UITableViewController {
+class RestaurantTableViewController: UITableViewController , UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
     
@@ -60,6 +60,7 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
     
+    //彈出選單功能
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let optionMenu = UIAlertController(title: nil, message: "What?", preferredStyle: .actionSheet)
@@ -97,6 +98,7 @@ class RestaurantTableViewController: UITableViewController {
             return UISwipeActionsConfiguration(actions: [detectAction, shareAction])
     }
     
+    //實作左滑刪除
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) ->
         UISwipeActionsConfiguration? {
             
@@ -115,6 +117,7 @@ class RestaurantTableViewController: UITableViewController {
                 completionHandler(true)
             }
             
+            //添加左滑分享選項
             let shareAction = UIContextualAction(style: .normal, title: "Share") {
                 (action, sourceView, completionHandler) in
                 
@@ -149,7 +152,7 @@ class RestaurantTableViewController: UITableViewController {
             let changePicButton = UIContextualAction(style: .normal, title: "Picture") { (action, sourceView, completionHandler) in
                 
                 
-                self.showActionSheet()
+                self.photoLibrary()
                 
                 
                 /*
@@ -170,21 +173,32 @@ class RestaurantTableViewController: UITableViewController {
                  } else {
                  activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
                  }
-
+                 
                  self.present(activityController, animated: true, completion: nil)
                  completionHandler(true)
                  */
                 
             }
             changePicButton.backgroundColor = UIColor(red:0.47, green:0.89, blue:0.37, alpha:1.0)
-
+            
             return UISwipeActionsConfiguration(actions: [changePicButton])
+    }
+    
+    func dialogBox(){
+        
+        let alert = UIAlertController(title: "Edit", message: "please enter a name you want", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: .default, handler: nil))
+        alert.addTextField { (textField: UITextField) in
+            textField.placeholder = "Enter Text:"
+            textField.isSecureTextEntry = true
+        }
+        self.present(alert, animated: true, completion: nil)
     }
     
     func camera()
     {
         let myPickerController = UIImagePickerController()
-        myPickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        myPickerController.delegate = self
         myPickerController.sourceType = UIImagePickerControllerSourceType.camera
         
         self.present(myPickerController, animated: true, completion: nil)
@@ -195,7 +209,7 @@ class RestaurantTableViewController: UITableViewController {
     {
         
         let myPickerController = UIImagePickerController()
-        myPickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate;
+        myPickerController.delegate = self
         myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
         
         self.present(myPickerController, animated: true, completion: nil)
@@ -206,7 +220,7 @@ class RestaurantTableViewController: UITableViewController {
         
         let actionSheet = UIImagePickerController()
         
-        actionSheet.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        actionSheet.delegate = self
         actionSheet.sourceType = UIImagePickerControllerSourceType.photoLibrary
         actionSheet.allowsEditing = false
         
@@ -218,7 +232,7 @@ class RestaurantTableViewController: UITableViewController {
         
         dismiss(animated: true, completion: nil)
         
-        let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0))
+        let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0))	    
         
         cell?.imageView?.image = image
     }
