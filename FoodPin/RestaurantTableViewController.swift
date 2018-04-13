@@ -26,9 +26,6 @@ class RestaurantTableViewController: UITableViewController {
         for _ in 1...restaurantNames.count {
             restaurantIsVisited.append(false)
         }
-        
-        print(restaurantIsVisited)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -145,26 +142,87 @@ class RestaurantTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) ->
         UISwipeActionsConfiguration? {
             
+            
+            let cellIdentifier = "Cell"
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as!
+            RestaurantTableViewCell
             let changePicButton = UIContextualAction(style: .normal, title: "Picture") { (action, sourceView, completionHandler) in
                 
-                let activityController : UIActivityViewController
                 
-                let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
-                let _: UIActivityViewController
+                self.showActionSheet()
                 
-                if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
-                    
-                    activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                } else {
-                    activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-                }
                 
-                self.present(activityController, animated: true, completion: nil)
-                completionHandler(true)
+                /*
+                 func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+                 
+                 self.restaurantImages[indexPath.row] = info[UIImagePickerControllerOriginalImage] as? UIImage
+                 self.dismissViewControllerAnimated(true, completion: nil)
+                 
+                 }
+                 let activityController : UIActivityViewController
+                 
+                 let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+                 let _: UIActivityViewController
+                 
+                 if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
+                 
+                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                 } else {
+                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+                 }
+
+                 self.present(activityController, animated: true, completion: nil)
+                 completionHandler(true)
+                 */
+                
             }
             changePicButton.backgroundColor = UIColor(red:0.47, green:0.89, blue:0.37, alpha:1.0)
-            
+
             return UISwipeActionsConfiguration(actions: [changePicButton])
     }
+    
+    func camera()
+    {
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        myPickerController.sourceType = UIImagePickerControllerSourceType.camera
+        
+        self.present(myPickerController, animated: true, completion: nil)
+        
+    }
+    
+    func photoLibrary()
+    {
+        
+        let myPickerController = UIImagePickerController()
+        myPickerController.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate;
+        myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        
+        self.present(myPickerController, animated: true, completion: nil)
+        
+    }
+    
+    func showActionSheet() {
+        
+        let actionSheet = UIImagePickerController()
+        
+        actionSheet.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        actionSheet.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        actionSheet.allowsEditing = false
+        
+        self.present(actionSheet, animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]? ) {
+        
+        dismiss(animated: true, completion: nil)
+        
+        let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0))
+        
+        cell?.imageView?.image = image
+    }
+    
 }
+
 
