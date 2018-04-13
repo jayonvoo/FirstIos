@@ -118,24 +118,28 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
             }
             
             //添加左滑分享選項
-            let shareAction = UIContextualAction(style: .normal, title: "Share") {
+            let shareAction = UIContextualAction(style: .normal, title: "Edit") {
                 (action, sourceView, completionHandler) in
                 
-                let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
-                let activityController: UIActivityViewController
                 
-                if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
-                    
-                    activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                } else {
-                    activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-                }
-                
-                self.present(activityController, animated: true, completion: nil)
-                
-                completionHandler(true)
-                
+                self.dialogBox()
+                /*
+                 let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+                 let activityController: UIActivityViewController
+                 
+                 if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
+                 
+                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+                 } else {
+                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+                 }
+                 
+                 self.present(activityController, animated: true, completion: nil)
+                 
+                 completionHandler(true)
+                 */
             }
+            
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [detectAction, shareAction])
             
             return swipeConfiguration
@@ -147,7 +151,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
             
             
             let cellIdentifier = "Cell"
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as!
+            _ = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as!
             RestaurantTableViewCell
             let changePicButton = UIContextualAction(style: .normal, title: "Picture") { (action, sourceView, completionHandler) in
                 
@@ -186,11 +190,11 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     
     func dialogBox(){
         
-        let alert = UIAlertController(title: "Edit", message: "please enter a name you want", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Edit Name", message: "please enter a name you want", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Click", style: .default, handler: nil))
         alert.addTextField { (textField: UITextField) in
             textField.placeholder = "Enter Text:"
-            textField.isSecureTextEntry = true
+            textField.isSecureTextEntry = false
         }
         self.present(alert, animated: true, completion: nil)
     }
