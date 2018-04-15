@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantTableViewController: UITableViewController , UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+class RestaurantTableViewController: UITableViewController , UIImagePickerControllerDelegate & UINavigationControllerDelegate, UITextFieldDelegate {
     
     var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
     
@@ -19,6 +19,8 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
     
     var restaurantIsVisited = [Bool]()
+    
+    var getText: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +83,6 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
             self.present(alertMessage, animated: true, completion: nil)
         }
         
-        
         let callAction = UIAlertAction(title: "Call" + "123-000-\(indexPath.row)", style: .default,
                                        handler: callerActionHandler)
         
@@ -123,6 +124,11 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 
                 
                 self.dialogBox()
+                
+                
+                /* func textFiled(textField: UITextField){
+                 self.restaurantNames[indexPath.row] = textField.text!
+                 }*/
                 /*
                  let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
                  let activityController: UIActivityViewController
@@ -130,7 +136,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                  if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
                  
                  activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                 } else {
+                 }3 else {
                  activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
                  }
                  
@@ -157,7 +163,6 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 
                 
                 self.photoLibrary()
-                
                 
                 /*
                  func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
@@ -195,6 +200,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         alert.addTextField { (textField: UITextField) in
             textField.placeholder = "Enter Text:"
             textField.isSecureTextEntry = false
+            textField.delegate = self
         }
         self.present(alert, animated: true, completion: nil)
     }
@@ -208,7 +214,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         self.present(myPickerController, animated: true, completion: nil)
         
     }
-    
+    //相簿選擇
     func photoLibrary()
     {
         
@@ -219,28 +225,30 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         self.present(myPickerController, animated: true, completion: nil)
         
     }
-    
-    func showActionSheet() {
+    /*
+     func showActionSheet() {
+     
+     let actionSheet = UIImagePickerController()
+     
+     actionSheet.delegate = self
+     actionSheet.sourceType = UIImagePickerControllerSourceType.photoLibrary
+     actionSheet.allowsEditing = false
+     
+     self.present(actionSheet, animated: true, completion: nil)
+     
+     }*/
+    //頭像替換進入點？
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+           // restaurantImages[] = image
+        }
         
-        let actionSheet = UIImagePickerController()
-        
-        actionSheet.delegate = self
-        actionSheet.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        actionSheet.allowsEditing = false
-        
-        self.present(actionSheet, animated: true, completion: nil)
-        
+        picker.dismiss(animated: true, completion: nil);
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]? ) {
-        
-        dismiss(animated: true, completion: nil)
-        
-        let cell = tableView.cellForRow(at: IndexPath(item: 0, section: 0))	    
-        
-        cell?.imageView?.image = image
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("textFieldDidEndEditing:" + textField.text!)
     }
-    
 }
 
 
