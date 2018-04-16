@@ -20,7 +20,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     
     var restaurantIsVisited = [Bool]()
     
-    var getText: UITextField?
+    var getText: String?
     var getIndex: IndexPath?
     var getCell: AnyObject?
     var getCellImage: UIImage?
@@ -72,12 +72,9 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         if didChangeImage{
             if(indexPath.row == didChangeImageOnRow){
                 imageContainer[indexPath.row] = getCellImage!
-                //cell.thumbnailImageView.image = getCellImage
-            }
+            } 
             cell.thumbnailImageView.image = imageContainer[indexPath.row]
         }
-        
-        // print(indexPath.row)
         
         cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
         
@@ -145,7 +142,8 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 (action, sourceView, completionHandler) in
                 
                 self.dialogBox()
-            
+                
+                
             }
             
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [detectAction, shareAction])
@@ -154,6 +152,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
             
     }
     
+    //更改頭像區塊
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) ->
         UISwipeActionsConfiguration? {
             
@@ -166,7 +165,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 self.didChangeImageOnRow = indexPath.row
                 self.photoLibrary()
                 self.didChangeImage = true
-             
+                
             }
             changePicButton.backgroundColor = UIColor(red:0.47, green:0.89, blue:0.37, alpha:1.0)
             
@@ -205,11 +204,11 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         self.present(myPickerController, animated: true, completion: nil)
         
     }
-   
+    
     //頭像替換進入點
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-          
+            
             self.getCellImage = image
         }
         
@@ -219,16 +218,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         
-        
-        print("textFieldDidEndEditing:" + textField.text!)
-    }
-    
-    func areEqualImages(img1: UIImage, img2: UIImage) -> Bool {
-        
-        guard let data1 = UIImagePNGRepresentation(img1) else { return false }
-        guard let data2 = UIImagePNGRepresentation(img2) else { return false }
-        
-        return data1 == data2
+        self.getText = textField.text
     }
 }
 

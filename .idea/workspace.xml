@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04cbee2e-af5b-4298-bae1-02b91861e201" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodPin.xcodeproj/project.xcworkspace/xcuserdata/travelingkp.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin.xcodeproj/project.xcworkspace/xcuserdata/travelingkp.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" afterDir="false" />
     </list>
     <ignored path="FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="RestaurantTableViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="60" column="8" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state relative-caret-position="145">
+              <caret line="10" column="93" lean-forward="true" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -40,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewCell.swift">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -65,8 +63,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="326" />
-    <option name="y" value="150" />
+    <option name="x" value="17" />
+    <option name="y" value="138" />
     <option name="width" value="1238" />
     <option name="height" value="819" />
   </component>
@@ -97,8 +95,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Cidr.FilesView" />
       <pane id="Scope" />
+      <pane id="Cidr.FilesView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,6 +144,7 @@
       <workItem from="1523496148540" duration="4162000" />
       <workItem from="1523506367979" duration="353000" />
       <workItem from="1523583275560" duration="2405000" />
+      <workItem from="1523870747726" duration="423000" />
     </task>
     <task id="LOCAL-00001" summary="update 1147">
       <created>1523332081773</created>
@@ -228,7 +227,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41361000" />
+    <option name="totallyTimeSpent" value="41784000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="326" y="150" width="1238" height="819" extended-state="0" />
@@ -239,12 +238,12 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500753" side_tool="true" weight="0.28626445" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924698" weight="0.20637119" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924698" weight="0.28672317" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924698" weight="0.20637119" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32967034" />
-      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -312,6 +311,27 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/FoodPin/AppDelegate.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="44" selection-start-line="37" selection-start-column="44" selection-end-line="37" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewCell.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="8" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FoodPin/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -403,13 +423,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UITableView/UIKit.UITableView.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="187" column="25" selection-start-line="187" selection-start-column="25" selection-end-line="187" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UITableView/UIKit.UITableView.swift" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -417,13 +431,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UIAlertController/UIKit.UIAlertController.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UIAlertController/UIKit.UIAlertController.swift" />
     <entry file="file://$PROJECT_DIR$/FoodPin/AppDelegate.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -431,24 +439,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UIContextualAction/UIKit.UIContextualAction.swift">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="31" column="77" selection-start-line="31" selection-start-column="77" selection-end-line="31" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../Caches/AppCode2018.1/ModuleCache/9E145/4.1/arm64/iphoneos11.3/UIKit.UIContextualAction/UIKit.UIContextualAction.swift" />
     <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewCell.swift">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="60" column="8" lean-forward="true" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="145">
+          <caret line="10" column="93" lean-forward="true" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
         </state>
       </provider>
     </entry>
