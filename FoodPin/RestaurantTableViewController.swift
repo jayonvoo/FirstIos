@@ -21,6 +21,12 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     var restaurantIsVisited = [Bool]()
     
     var getText: UITextField?
+    var getIndex: IndexPath?
+    var getCell: AnyObject?
+    var getCellImage: UIImage?
+    var didChangeImage = false
+    var didChangeImageOnRow: Int?
+    var imageContainer = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +57,27 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as!
         RestaurantTableViewCell
         
+        self.getCell = cell
+        
         // Configure the cell...
         cell.nameLabel.text = restaurantNames[indexPath.row]
         cell.thumbnailImageView.image = UIImage(named: restaurantImages[indexPath.row])
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         cell.locationLabel.text = restaurantLocations[indexPath.row]
+        
+        if(imageContainer.count != restaurantNames.count){
+            imageContainer.append(UIImage(named: restaurantImages[indexPath.row])!)
+        }
+        
+        if didChangeImage{
+            if(indexPath.row == didChangeImageOnRow){
+                imageContainer[indexPath.row] = getCellImage!
+                //cell.thumbnailImageView.image = getCellImage
+            }
+            cell.thumbnailImageView.image = imageContainer[indexPath.row]
+        }
+        
+        // print(indexPath.row)
         
         cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
         
@@ -122,28 +144,8 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
             let shareAction = UIContextualAction(style: .normal, title: "Edit") {
                 (action, sourceView, completionHandler) in
                 
-                
                 self.dialogBox()
-                
-                
-                /* func textFiled(textField: UITextField){
-                 self.restaurantNames[indexPath.row] = textField.text!
-                 }*/
-                /*
-                 let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
-                 let activityController: UIActivityViewController
-                 
-                 if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
-                 
-                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                 }3 else {
-                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-                 }
-                 
-                 self.present(activityController, animated: true, completion: nil)
-                 
-                 completionHandler(true)
-                 */
+            
             }
             
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [detectAction, shareAction])
@@ -161,32 +163,10 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
             RestaurantTableViewCell
             let changePicButton = UIContextualAction(style: .normal, title: "Picture") { (action, sourceView, completionHandler) in
                 
-                
+                self.didChangeImageOnRow = indexPath.row
                 self.photoLibrary()
-                
-                /*
-                 func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-                 
-                 self.restaurantImages[indexPath.row] = info[UIImagePickerControllerOriginalImage] as? UIImage
-                 self.dismissViewControllerAnimated(true, completion: nil)
-                 
-                 }
-                 let activityController : UIActivityViewController
-                 
-                 let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
-                 let _: UIActivityViewController
-                 
-                 if let imageToShare = UIImage(named: self.restaurantImages[indexPath.row]) {
-                 
-                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
-                 } else {
-                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
-                 }
-                 
-                 self.present(activityController, animated: true, completion: nil)
-                 completionHandler(true)
-                 */
-                
+                self.didChangeImage = true
+             
             }
             changePicButton.backgroundColor = UIColor(red:0.47, green:0.89, blue:0.37, alpha:1.0)
             
@@ -225,29 +205,30 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
         self.present(myPickerController, animated: true, completion: nil)
         
     }
-    /*
-     func showActionSheet() {
-     
-     let actionSheet = UIImagePickerController()
-     
-     actionSheet.delegate = self
-     actionSheet.sourceType = UIImagePickerControllerSourceType.photoLibrary
-     actionSheet.allowsEditing = false
-     
-     self.present(actionSheet, animated: true, completion: nil)
-     
-     }*/
-    //頭像替換進入點？
+   
+    //頭像替換進入點
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-           // restaurantImages[] = image
+          
+            self.getCellImage = image
         }
         
         picker.dismiss(animated: true, completion: nil);
+        self.tableView.reloadData()
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        
         print("textFieldDidEndEditing:" + textField.text!)
+    }
+    
+    func areEqualImages(img1: UIImage, img2: UIImage) -> Bool {
+        
+        guard let data1 = UIImagePNGRepresentation(img1) else { return false }
+        guard let data2 = UIImagePNGRepresentation(img2) else { return false }
+        
+        return data1 == data2
     }
 }
 
