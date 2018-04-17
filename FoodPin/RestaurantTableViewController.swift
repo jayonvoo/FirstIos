@@ -76,11 +76,7 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 imageContainer[indexPath.row] = getCellImage!
             } 
             cell.thumbnailImageView.image = imageContainer[indexPath.row]
-        }/*else if didChangeName{
-            if indexPath.row == didChangeNameOnRow{
-                restaurantNames[indexPath.row] = getText!
-            }
-        }*/
+        }
         
         cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
         
