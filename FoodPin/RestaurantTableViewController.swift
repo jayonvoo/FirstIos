@@ -25,7 +25,9 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     var getCell: AnyObject?
     var getCellImage: UIImage?
     var didChangeImage = false
+    var didChangeName = false
     var didChangeImageOnRow: Int?
+    var didChangeNameOnRow : Int?
     var imageContainer = [UIImage]()
     
     override func viewDidLoad() {
@@ -74,7 +76,11 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 imageContainer[indexPath.row] = getCellImage!
             } 
             cell.thumbnailImageView.image = imageContainer[indexPath.row]
-        }
+        }/*else if didChangeName{
+            if indexPath.row == didChangeNameOnRow{
+                restaurantNames[indexPath.row] = getText!
+            }
+        }*/
         
         cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
         
@@ -142,8 +148,8 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
                 (action, sourceView, completionHandler) in
                 
                 self.dialogBox()
-                
-                
+                self.didChangeName = true
+                self.getIndex = indexPath
             }
             
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [detectAction, shareAction])
@@ -219,6 +225,9 @@ class RestaurantTableViewController: UITableViewController , UIImagePickerContro
     func textFieldDidEndEditing(_ textField: UITextField) {
         
         self.getText = textField.text
+
+        restaurantNames[(getIndex?.row)!] = getText!
+        self.tableView.reloadData()
     }
 }
 

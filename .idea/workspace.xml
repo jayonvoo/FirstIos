@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04cbee2e-af5b-4298-bae1-02b91861e201" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/FoodPin.xcodeproj/project.xcworkspace/xcuserdata/travelingkp.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin.xcodeproj/project.xcworkspace/xcuserdata/travelingkp.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift" afterDir="false" />
-    </list>
+    <list default="true" id="04cbee2e-af5b-4298-bae1-02b91861e201" name="Default" comment="" />
     <ignored path="FoodPin.xcodeproj/xcuserdata/travelingkp.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +25,8 @@
       <file leaf-file-name="RestaurantTableViewController.swift" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="10" column="93" lean-forward="true" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
+            <state relative-caret-position="347">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -63,10 +60,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="17" />
-    <option name="y" value="138" />
+    <option name="x" value="13" />
+    <option name="y" value="107" />
     <option name="width" value="1238" />
-    <option name="height" value="819" />
+    <option name="height" value="906" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -144,7 +141,7 @@
       <workItem from="1523496148540" duration="4162000" />
       <workItem from="1523506367979" duration="353000" />
       <workItem from="1523583275560" duration="2405000" />
-      <workItem from="1523870747726" duration="423000" />
+      <workItem from="1523870747726" duration="756000" />
     </task>
     <task id="LOCAL-00001" summary="update 1147">
       <created>1523332081773</created>
@@ -227,19 +224,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41784000" />
+    <option name="totallyTimeSpent" value="42117000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="326" y="150" width="1238" height="819" extended-state="0" />
-    <editor active="true" />
+    <frame x="17" y="138" width="1238" height="819" extended-state="0" />
     <layout>
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25636813" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25636813" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500753" side_tool="true" weight="0.28626445" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924698" weight="0.28672317" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924698" weight="0.20637119" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.49924698" visible="true" weight="0.20637119" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32967034" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997175" />
@@ -449,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FoodPin/RestaurantTableViewController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="10" column="93" lean-forward="true" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
+        <state relative-caret-position="347">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
